@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="KGk-i7-Jjw" customClass="RepetitionCellTableViewCell" customModule="WeightLifting" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="580" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="580" height="50.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPv-Hl-B4d">
+                        <rect key="frame" x="529.5" y="0.0" width="50.5" height="50.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ZPv-Hl-B4d" secondAttribute="height" multiplier="1:1" id="cXv-qn-jQI"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="plus"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm5-nj-YOR">
+                        <rect key="frame" x="479" y="0.0" width="50.5" height="50.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="sm5-nj-YOR" secondAttribute="height" multiplier="1:1" id="3eY-nU-d8r"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="edit"/>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="weight and count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="loz-39-vVY">
+                        <rect key="frame" x="0.0" y="0.0" width="479" height="50.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ZPv-Hl-B4d" secondAttribute="trailing" id="4YR-vK-yQS"/>
+                    <constraint firstItem="ZPv-Hl-B4d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ac0-Tt-TdC"/>
+                    <constraint firstItem="ZPv-Hl-B4d" firstAttribute="leading" secondItem="sm5-nj-YOR" secondAttribute="trailing" id="BMh-7s-jCA"/>
+                    <constraint firstAttribute="bottom" secondItem="loz-39-vVY" secondAttribute="bottom" id="IrW-OS-GVA"/>
+                    <constraint firstItem="sm5-nj-YOR" firstAttribute="leading" secondItem="loz-39-vVY" secondAttribute="trailing" id="Pwy-2v-xhl"/>
+                    <constraint firstAttribute="bottom" secondItem="sm5-nj-YOR" secondAttribute="bottom" id="WGX-df-BrU"/>
+                    <constraint firstItem="loz-39-vVY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WKp-dK-z0k"/>
+                    <constraint firstAttribute="bottom" secondItem="ZPv-Hl-B4d" secondAttribute="bottom" id="ahi-5S-I5C"/>
+                    <constraint firstItem="loz-39-vVY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dzu-w7-FqS"/>
+                    <constraint firstItem="sm5-nj-YOR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qYW-yy-SwF"/>
+                    <constraint firstItem="ZPv-Hl-B4d" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wVa-1W-IfM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="editButton" destination="sm5-nj-YOR" id="d7u-Zj-qkL"/>
+                <outlet property="plusButton" destination="ZPv-Hl-B4d" id="6Xg-bi-Q2I"/>
+                <outlet property="weightAndCountTextField" destination="loz-39-vVY" id="hw7-03-Jvo"/>
+            </connections>
+            <point key="canvasLocation" x="165" y="57.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="edit" width="64" height="64"/>
+        <image name="plus" width="64" height="64"/>
+    </resources>
+</document>

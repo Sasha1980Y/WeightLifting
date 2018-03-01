@@ -7,23 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F18DC594E9CCE7D79C7274 /* Pods_WeightLifting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15EDA46167E0FD2D23DE1C0 /* Pods_WeightLifting.framework */; };
+		7F0BF60D2047279A00F9D8F6 /* ModelEx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F0BF60B2047279A00F9D8F6 /* ModelEx.xcdatamodeld */; };
+		7F0ED5D120455A4C00A3DEBB /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */; };
+		7F177864200D530400E2FCEA /* ModelExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F177863200D530300E2FCEA /* ModelExercise.swift */; };
+		7F5E43D620442A3300FBE03C /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43D520442A3300FBE03C /* TrainingViewController.swift */; };
+		7F5E43D920442A9500FBE03C /* ModelT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43D820442A9500FBE03C /* ModelT.swift */; };
+		7F87EE1A200A7DEB00329B80 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F87EE19200A7DEB00329B80 /* Model.swift */; };
+		7FAE5C9D200F860F004C80E7 /* RepetitionCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAE5C9B200F860F004C80E7 /* RepetitionCellTableViewCell.swift */; };
+		7FAE5C9E200F860F004C80E7 /* RepetitionCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FAE5C9C200F860F004C80E7 /* RepetitionCellTableViewCell.xib */; };
 		7FB1CCF2200621EC00D23FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1CCF1200621EC00D23FDC /* AppDelegate.swift */; };
-		7FB1CCF4200621EC00D23FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1CCF3200621EC00D23FDC /* ViewController.swift */; };
 		7FB1CCF7200621EC00D23FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1CCF5200621EC00D23FDC /* Main.storyboard */; };
-		7FB1CCFA200621EC00D23FDC /* WeightLifting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1CCF8200621EC00D23FDC /* WeightLifting.xcdatamodeld */; };
 		7FB1CCFC200621EC00D23FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1CCFB200621EC00D23FDC /* Assets.xcassets */; };
 		7FB1CCFF200621EC00D23FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1CCFD200621EC00D23FDC /* LaunchScreen.storyboard */; };
+		7FB1CD07200622E100D23FDC /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1CD06200622E100D23FDC /* EnterViewController.swift */; };
+		7FCBFA5E200E01D8003E40EE /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCBFA5D200E01D8003E40EE /* Custom.swift */; };
+		7FCBFA60200E05DC003E40EE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCBFA5F200E05DC003E40EE /* SecondViewController.swift */; };
+		7FD1D01D2046A59600926C4F /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1D01C2046A59600926C4F /* Saver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B151355F89DE60C705303F7 /* Pods-WeightLifting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeightLifting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeightLifting/Pods-WeightLifting.debug.xcconfig"; sourceTree = "<group>"; };
+		7F0BF60C2047279A00F9D8F6 /* ModelEx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelEx.xcdatamodel; sourceTree = "<group>"; };
+		7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		7F177863200D530300E2FCEA /* ModelExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExercise.swift; sourceTree = "<group>"; };
+		7F5E43D520442A3300FBE03C /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		7F5E43D820442A9500FBE03C /* ModelT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelT.swift; sourceTree = "<group>"; };
+		7F87EE19200A7DEB00329B80 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7FAE5C9B200F860F004C80E7 /* RepetitionCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionCellTableViewCell.swift; sourceTree = "<group>"; };
+		7FAE5C9C200F860F004C80E7 /* RepetitionCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepetitionCellTableViewCell.xib; sourceTree = "<group>"; };
 		7FB1CCEE200621EC00D23FDC /* WeightLifting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeightLifting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB1CCF1200621EC00D23FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FB1CCF3200621EC00D23FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7FB1CCF6200621EC00D23FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7FB1CCF9200621EC00D23FDC /* WeightLifting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeightLifting.xcdatamodel; sourceTree = "<group>"; };
 		7FB1CCFB200621EC00D23FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FB1CCFE200621EC00D23FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FB1CD00200621EC00D23FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB1CD06200622E100D23FDC /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
+		7FCBFA5D200E01D8003E40EE /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		7FCBFA5F200E05DC003E40EE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7FD1D01C2046A59600926C4F /* Saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saver.swift; sourceTree = "<group>"; };
+		93DA62BF0FB1FFB5CED4B1D1 /* Pods-WeightLifting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeightLifting.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeightLifting/Pods-WeightLifting.release.xcconfig"; sourceTree = "<group>"; };
+		C15EDA46167E0FD2D23DE1C0 /* Pods_WeightLifting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeightLifting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F18DC594E9CCE7D79C7274 /* Pods_WeightLifting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5623FF9C0B905F9F17ECEEB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B151355F89DE60C705303F7 /* Pods-WeightLifting.debug.xcconfig */,
+				93DA62BF0FB1FFB5CED4B1D1 /* Pods-WeightLifting.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F5E43D720442A5700FBE03C /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				7F87EE19200A7DEB00329B80 /* Model.swift */,
+				7FCBFA5F200E05DC003E40EE /* SecondViewController.swift */,
+				7FB1CD06200622E100D23FDC /* EnterViewController.swift */,
+				7FCBFA5D200E01D8003E40EE /* Custom.swift */,
+				7F177863200D530300E2FCEA /* ModelExercise.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
 		7FB1CCE5200621EC00D23FDC = {
 			isa = PBXGroup;
 			children = (
 				7FB1CCF0200621EC00D23FDC /* WeightLifting */,
 				7FB1CCEF200621EC00D23FDC /* Products */,
+				5623FF9C0B905F9F17ECEEB1 /* Pods */,
+				8ADA75C13DF9186E2B0B9181 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +105,28 @@
 			isa = PBXGroup;
 			children = (
 				7FB1CCF1200621EC00D23FDC /* AppDelegate.swift */,
-				7FB1CCF3200621EC00D23FDC /* ViewController.swift */,
+				7FD1D01C2046A59600926C4F /* Saver.swift */,
+				7F5E43D520442A3300FBE03C /* TrainingViewController.swift */,
+				7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */,
+				7FAE5C9B200F860F004C80E7 /* RepetitionCellTableViewCell.swift */,
+				7FAE5C9C200F860F004C80E7 /* RepetitionCellTableViewCell.xib */,
+				7F5E43D820442A9500FBE03C /* ModelT.swift */,
+				7F5E43D720442A5700FBE03C /* Old */,
 				7FB1CCF5200621EC00D23FDC /* Main.storyboard */,
 				7FB1CCFB200621EC00D23FDC /* Assets.xcassets */,
 				7FB1CCFD200621EC00D23FDC /* LaunchScreen.storyboard */,
 				7FB1CD00200621EC00D23FDC /* Info.plist */,
-				7FB1CCF8200621EC00D23FDC /* WeightLifting.xcdatamodeld */,
+				7F0BF60B2047279A00F9D8F6 /* ModelEx.xcdatamodeld */,
 			);
 			path = WeightLifting;
+			sourceTree = "<group>";
+		};
+		8ADA75C13DF9186E2B0B9181 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C15EDA46167E0FD2D23DE1C0 /* Pods_WeightLifting.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB1CD03200621EC00D23FDC /* Build configuration list for PBXNativeTarget "WeightLifting" */;
 			buildPhases = (
+				04CBC8E47900AC21B7807113 /* [CP] Check Pods Manifest.lock */,
 				7FB1CCEA200621EC00D23FDC /* Sources */,
 				7FB1CCEB200621EC00D23FDC /* Frameworks */,
 				7FB1CCEC200621EC00D23FDC /* Resources */,
+				E070C0C981ACA21F8E7A78B0 /* [CP] Embed Pods Frameworks */,
+				C978EFCD1E3FC72969D0274A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,20 +193,84 @@
 			files = (
 				7FB1CCFF200621EC00D23FDC /* LaunchScreen.storyboard in Resources */,
 				7FB1CCFC200621EC00D23FDC /* Assets.xcassets in Resources */,
+				7FAE5C9E200F860F004C80E7 /* RepetitionCellTableViewCell.xib in Resources */,
 				7FB1CCF7200621EC00D23FDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04CBC8E47900AC21B7807113 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeightLifting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C978EFCD1E3FC72969D0274A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeightLifting/Pods-WeightLifting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E070C0C981ACA21F8E7A78B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeightLifting/Pods-WeightLifting-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeightLifting/Pods-WeightLifting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FB1CCEA200621EC00D23FDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB1CCFA200621EC00D23FDC /* WeightLifting.xcdatamodeld in Sources */,
-				7FB1CCF4200621EC00D23FDC /* ViewController.swift in Sources */,
+				7F5E43D620442A3300FBE03C /* TrainingViewController.swift in Sources */,
 				7FB1CCF2200621EC00D23FDC /* AppDelegate.swift in Sources */,
+				7FCBFA5E200E01D8003E40EE /* Custom.swift in Sources */,
+				7F5E43D920442A9500FBE03C /* ModelT.swift in Sources */,
+				7F177864200D530400E2FCEA /* ModelExercise.swift in Sources */,
+				7FCBFA60200E05DC003E40EE /* SecondViewController.swift in Sources */,
+				7F0BF60D2047279A00F9D8F6 /* ModelEx.xcdatamodeld in Sources */,
+				7FB1CD07200622E100D23FDC /* EnterViewController.swift in Sources */,
+				7FAE5C9D200F860F004C80E7 /* RepetitionCellTableViewCell.swift in Sources */,
+				7F87EE1A200A7DEB00329B80 /* Model.swift in Sources */,
+				7F0ED5D120455A4C00A3DEBB /* ChartViewController.swift in Sources */,
+				7FD1D01D2046A59600926C4F /* Saver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,28 +405,32 @@
 		};
 		7FB1CD04200621EC00D23FDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B151355F89DE60C705303F7 /* Pods-WeightLifting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3HY885L7L9;
 				INFOPLIST_FILE = WeightLifting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Yakovenko.WeightLifting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		7FB1CD05200621EC00D23FDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DA62BF0FB1FFB5CED4B1D1 /* Pods-WeightLifting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3HY885L7L9;
 				INFOPLIST_FILE = WeightLifting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Yakovenko.WeightLifting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -326,13 +459,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7FB1CCF8200621EC00D23FDC /* WeightLifting.xcdatamodeld */ = {
+		7F0BF60B2047279A00F9D8F6 /* ModelEx.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7FB1CCF9200621EC00D23FDC /* WeightLifting.xcdatamodel */,
+				7F0BF60C2047279A00F9D8F6 /* ModelEx.xcdatamodel */,
 			);
-			currentVersion = 7FB1CCF9200621EC00D23FDC /* WeightLifting.xcdatamodel */;
-			path = WeightLifting.xcdatamodeld;
+			currentVersion = 7F0BF60C2047279A00F9D8F6 /* ModelEx.xcdatamodel */;
+			path = ModelEx.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
