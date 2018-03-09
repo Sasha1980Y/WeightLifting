@@ -12,6 +12,10 @@ import CoreData
 class TrainingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var dateButton: UIButton!
+    
+    var currentDate: Date = Date()
+    
     var myTraining: [Exercises] = []
     
     override func viewDidLoad() {
@@ -19,21 +23,103 @@ class TrainingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        myTraining.append(Exercises(name: "Exercise № 1", repetitionsArray: [Exercises.RepetitionCount(weight: 0)]))
+        myTraining.append(Exercises(name: "Ривок", repetitionsArray: [Exercises.RepetitionCount(weight: 0)]))
         
         // nib for cell
         let nib = UINib(nibName: "RepetitionCellTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
-       
-    }
-    
-    func saveToCoreData(date: Int64) {
+        
+        // insert date today to button "Date"
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MMM.yyyy"
+        let dateText = formatter.string(from: date)
+        dateButton.setTitle(dateText, for: .normal)
         
     }
-    
-    func getValue() {
-        
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        self.tableView.reloadData()
     }
+    
+    
+    // MARK: Alert DatePicker
+    @IBAction func dateAlertButton(_ sender: Any) {
+        alertWithDatePicker()
+    }
+    
+    func alertWithDatePicker() {
+        let myDatePicker: UIDatePicker = UIDatePicker()
+        // setting properties of the datePicker
+        myDatePicker.timeZone = NSTimeZone.local
+        myDatePicker.frame = CGRect(x: 0, y: 15, width: 270, height: 200)
+        myDatePicker.datePickerMode = .date
+        let alertController = UIAlertController(title: "\n\n\n\n\n\n\n\n", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.view.addSubview(myDatePicker)
+        let somethingAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        alertController.addAction(somethingAction)
+        alertController.addAction(cancelAction)
+        myDatePicker.addTarget(self, action: #selector(valueChangedDatePicker(picker:)), for: .valueChanged)
+        // without this don't work with today date
+        myDatePicker.date = currentDate
+        self.present(alertController, animated: true, completion:{})
+    }
+    
+    @objc func valueChangedDatePicker(picker: UIDatePicker) {
+        // Date to String
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MMM.yyyy"
+        let dateText = formatter.string(from: picker.date)
+        currentDate = picker.date
+        
+        self.dateButton.setTitle(dateText, for: .normal)
+    }
+    
+// MARK: save date to CoreData
+    
+    @IBAction func saveToCoreData(_ sender: UIBarButtonItem) {
+        guard let dataFromTraining = try? JSONEncoder().encode(myTraining) else {
+            return
+        }
+        if let output = Saver.sharedInstance.selectQuestion(date: currentDate) {
+            if output.count > 0 {
+                Saver.sharedInstance.replaceCoreData(enterDate: currentDate, training: dataFromTraining)
+                print("Saved replace object")
+                return
+            } else {
+                
+            }
+        }
+        Saver.sharedInstance.saveToCoreData(date: currentDate, training: dataFromTraining)
+    }
+    
+    @IBAction func uploadFromCoreData(_ sender: UIBarButtonItem) {
+        if let output = Saver.sharedInstance.selectQuestion(date: currentDate) {
+            if output.count > 0 {
+                print("count of training = ", output.count)
+                if let training = output[0].training {
+                    if let trainingArray = try? JSONDecoder().decode([Exercises].self, from: training as Data) {
+                        myTraining = trainingArray
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    
+                }
+            } else {
+                emptyTrainingList()
+            }
+        } else {
+            emptyTrainingList()
+        }
+    }
+    
+    // reload empty table
+    func emptyTrainingList() {
+        myTraining = []
+        myTraining.append(Exercises(name: "Ривок", repetitionsArray: [Exercises.RepetitionCount(weight: 0)]))
+        self.tableView.reloadData()
+    }
+    
     
 }
 
@@ -44,8 +130,8 @@ extension TrainingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
-    
 }
+
 extension TrainingViewController: UITableViewDataSource {
     
 // MARK: Section
@@ -79,7 +165,7 @@ extension TrainingViewController: UITableViewDataSource {
         
     }
     
-    // MARK: Rows
+// MARK: Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myTraining[section].repetitionsArray.count //repArray.count
     }
@@ -91,7 +177,26 @@ extension TrainingViewController: UITableViewDataSource {
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            if indexPath.section > 0 {
+                myTraining[indexPath.section].repetitionsArray.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                if indexPath.row == 0 {
+                    myTraining.remove(at: indexPath.section)
+                    self.tableView.reloadData()
+                }
+            } else {
+                if indexPath.row > 0 {
+                    myTraining[indexPath.section].repetitionsArray.remove(at: indexPath.row)
+                    self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                } else {
+                    self.emptyTrainingList()
+                }
+            }
+        }
+    }
     
 // MARK: selector func for Rows
     
@@ -143,10 +248,8 @@ extension TrainingViewController: UITableViewDataSource {
             }
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
- 
         }
         self.tableView.reloadData()
-        
     }
     
 // MARK: selector func for Header
@@ -179,5 +282,6 @@ extension TrainingViewController: UITableViewDataSource {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+
 }
 

@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		02F18DC594E9CCE7D79C7274 /* Pods_WeightLifting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15EDA46167E0FD2D23DE1C0 /* Pods_WeightLifting.framework */; };
-		7F0BF60D2047279A00F9D8F6 /* ModelEx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F0BF60B2047279A00F9D8F6 /* ModelEx.xcdatamodeld */; };
 		7F0ED5D120455A4C00A3DEBB /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */; };
 		7F177864200D530400E2FCEA /* ModelExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F177863200D530300E2FCEA /* ModelExercise.swift */; };
 		7F5E43D620442A3300FBE03C /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43D520442A3300FBE03C /* TrainingViewController.swift */; };
 		7F5E43D920442A9500FBE03C /* ModelT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43D820442A9500FBE03C /* ModelT.swift */; };
-		7F87EE1A200A7DEB00329B80 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F87EE19200A7DEB00329B80 /* Model.swift */; };
+		7FA2B0AD20495D51006D4812 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2B0AC20495D51006D4812 /* CoreDataManager.swift */; };
+		7FA2B0BD2049635B006D4812 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2B0BB2049635B006D4812 /* Model.xcdatamodeld */; };
+		7FA2B0C420497915006D4812 /* Model+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2B0C220497915006D4812 /* Model+CoreDataClass.swift */; };
+		7FA2B0C520497915006D4812 /* Model+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2B0C320497915006D4812 /* Model+CoreDataProperties.swift */; };
 		7FAE5C9D200F860F004C80E7 /* RepetitionCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAE5C9B200F860F004C80E7 /* RepetitionCellTableViewCell.swift */; };
 		7FAE5C9E200F860F004C80E7 /* RepetitionCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FAE5C9C200F860F004C80E7 /* RepetitionCellTableViewCell.xib */; };
 		7FB1CCF2200621EC00D23FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1CCF1200621EC00D23FDC /* AppDelegate.swift */; };
 		7FB1CCF7200621EC00D23FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1CCF5200621EC00D23FDC /* Main.storyboard */; };
 		7FB1CCFC200621EC00D23FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1CCFB200621EC00D23FDC /* Assets.xcassets */; };
 		7FB1CCFF200621EC00D23FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1CCFD200621EC00D23FDC /* LaunchScreen.storyboard */; };
-		7FB1CD07200622E100D23FDC /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1CD06200622E100D23FDC /* EnterViewController.swift */; };
+		7FB43F1C20484588001492B3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB43F1B20484588001492B3 /* Helper.swift */; };
 		7FCBFA5E200E01D8003E40EE /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCBFA5D200E01D8003E40EE /* Custom.swift */; };
 		7FCBFA60200E05DC003E40EE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCBFA5F200E05DC003E40EE /* SecondViewController.swift */; };
 		7FD1D01D2046A59600926C4F /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD1D01C2046A59600926C4F /* Saver.swift */; };
@@ -28,12 +30,15 @@
 
 /* Begin PBXFileReference section */
 		6B151355F89DE60C705303F7 /* Pods-WeightLifting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeightLifting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeightLifting/Pods-WeightLifting.debug.xcconfig"; sourceTree = "<group>"; };
-		7F0BF60C2047279A00F9D8F6 /* ModelEx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelEx.xcdatamodel; sourceTree = "<group>"; };
 		7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		7F177863200D530300E2FCEA /* ModelExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExercise.swift; sourceTree = "<group>"; };
 		7F5E43D520442A3300FBE03C /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		7F5E43D820442A9500FBE03C /* ModelT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelT.swift; sourceTree = "<group>"; };
-		7F87EE19200A7DEB00329B80 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7FA2B0AC20495D51006D4812 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7FA2B0BC2049635B006D4812 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7FA2B0C220497915006D4812 /* Model+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7FA2B0C320497915006D4812 /* Model+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7FABF917204DBC2600941A14 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		7FAE5C9B200F860F004C80E7 /* RepetitionCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionCellTableViewCell.swift; sourceTree = "<group>"; };
 		7FAE5C9C200F860F004C80E7 /* RepetitionCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepetitionCellTableViewCell.xib; sourceTree = "<group>"; };
 		7FB1CCEE200621EC00D23FDC /* WeightLifting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeightLifting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +47,7 @@
 		7FB1CCFB200621EC00D23FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FB1CCFE200621EC00D23FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FB1CD00200621EC00D23FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FB1CD06200622E100D23FDC /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
+		7FB43F1B20484588001492B3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		7FCBFA5D200E01D8003E40EE /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
 		7FCBFA5F200E05DC003E40EE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7FD1D01C2046A59600926C4F /* Saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saver.swift; sourceTree = "<group>"; };
@@ -74,9 +79,7 @@
 		7F5E43D720442A5700FBE03C /* Old */ = {
 			isa = PBXGroup;
 			children = (
-				7F87EE19200A7DEB00329B80 /* Model.swift */,
 				7FCBFA5F200E05DC003E40EE /* SecondViewController.swift */,
-				7FB1CD06200622E100D23FDC /* EnterViewController.swift */,
 				7FCBFA5D200E01D8003E40EE /* Custom.swift */,
 				7F177863200D530300E2FCEA /* ModelExercise.swift */,
 			);
@@ -86,6 +89,9 @@
 		7FB1CCE5200621EC00D23FDC = {
 			isa = PBXGroup;
 			children = (
+				7FABF917204DBC2600941A14 /* Location.gpx */,
+				7FA2B0C220497915006D4812 /* Model+CoreDataClass.swift */,
+				7FA2B0C320497915006D4812 /* Model+CoreDataProperties.swift */,
 				7FB1CCF0200621EC00D23FDC /* WeightLifting */,
 				7FB1CCEF200621EC00D23FDC /* Products */,
 				5623FF9C0B905F9F17ECEEB1 /* Pods */,
@@ -106,6 +112,8 @@
 			children = (
 				7FB1CCF1200621EC00D23FDC /* AppDelegate.swift */,
 				7FD1D01C2046A59600926C4F /* Saver.swift */,
+				7FB43F1B20484588001492B3 /* Helper.swift */,
+				7FA2B0AC20495D51006D4812 /* CoreDataManager.swift */,
 				7F5E43D520442A3300FBE03C /* TrainingViewController.swift */,
 				7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */,
 				7FAE5C9B200F860F004C80E7 /* RepetitionCellTableViewCell.swift */,
@@ -113,10 +121,10 @@
 				7F5E43D820442A9500FBE03C /* ModelT.swift */,
 				7F5E43D720442A5700FBE03C /* Old */,
 				7FB1CCF5200621EC00D23FDC /* Main.storyboard */,
+				7FA2B0BB2049635B006D4812 /* Model.xcdatamodeld */,
 				7FB1CCFB200621EC00D23FDC /* Assets.xcassets */,
 				7FB1CCFD200621EC00D23FDC /* LaunchScreen.storyboard */,
 				7FB1CD00200621EC00D23FDC /* Info.plist */,
-				7F0BF60B2047279A00F9D8F6 /* ModelEx.xcdatamodeld */,
 			);
 			path = WeightLifting;
 			sourceTree = "<group>";
@@ -261,15 +269,17 @@
 			files = (
 				7F5E43D620442A3300FBE03C /* TrainingViewController.swift in Sources */,
 				7FB1CCF2200621EC00D23FDC /* AppDelegate.swift in Sources */,
+				7FA2B0C420497915006D4812 /* Model+CoreDataClass.swift in Sources */,
 				7FCBFA5E200E01D8003E40EE /* Custom.swift in Sources */,
+				7FA2B0BD2049635B006D4812 /* Model.xcdatamodeld in Sources */,
+				7FA2B0C520497915006D4812 /* Model+CoreDataProperties.swift in Sources */,
 				7F5E43D920442A9500FBE03C /* ModelT.swift in Sources */,
 				7F177864200D530400E2FCEA /* ModelExercise.swift in Sources */,
 				7FCBFA60200E05DC003E40EE /* SecondViewController.swift in Sources */,
-				7F0BF60D2047279A00F9D8F6 /* ModelEx.xcdatamodeld in Sources */,
-				7FB1CD07200622E100D23FDC /* EnterViewController.swift in Sources */,
 				7FAE5C9D200F860F004C80E7 /* RepetitionCellTableViewCell.swift in Sources */,
-				7F87EE1A200A7DEB00329B80 /* Model.swift in Sources */,
+				7FB43F1C20484588001492B3 /* Helper.swift in Sources */,
 				7F0ED5D120455A4C00A3DEBB /* ChartViewController.swift in Sources */,
+				7FA2B0AD20495D51006D4812 /* CoreDataManager.swift in Sources */,
 				7FD1D01D2046A59600926C4F /* Saver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,13 +469,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7F0BF60B2047279A00F9D8F6 /* ModelEx.xcdatamodeld */ = {
+		7FA2B0BB2049635B006D4812 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7F0BF60C2047279A00F9D8F6 /* ModelEx.xcdatamodel */,
+				7FA2B0BC2049635B006D4812 /* Model.xcdatamodel */,
 			);
-			currentVersion = 7F0BF60C2047279A00F9D8F6 /* ModelEx.xcdatamodel */;
-			path = ModelEx.xcdatamodeld;
+			currentVersion = 7FA2B0BC2049635B006D4812 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

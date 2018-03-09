@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,40 +129,55 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6r-6l-Exq">
-                                <rect key="frame" x="315" y="64" width="60" height="50"/>
+                                <rect key="frame" x="310" y="69" width="60" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.96087433310000003" blue="0.23853101230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Lij-BU-chS"/>
-                                    <constraint firstAttribute="width" constant="60" id="awh-wU-dch"/>
+                                    <constraint firstAttribute="width" constant="60" id="msw-2l-PIb"/>
                                 </constraints>
                                 <state key="normal" title="Chart"/>
                                 <connections>
                                     <segue destination="Yw7-ye-FHR" kind="show" id="18e-Cq-QML"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dBK-zd-pVa">
-                                <rect key="frame" x="0.0" y="64" width="315" height="50"/>
-                                <date key="date" timeIntervalSinceReferenceDate="541430313.39980602">
-                                    <!--2018-02-27 13:18:33 +0000-->
-                                </date>
-                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBL-yT-V8Z">
+                                <rect key="frame" x="5" y="69" width="300" height="40"/>
+                                <color key="backgroundColor" red="0.36519835150000002" green="1" blue="0.34180222669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Date"/>
+                                <connections>
+                                    <action selector="dateAlertButton:" destination="A6S-Ws-q80" eventType="touchUpInside" id="JdT-6L-X0f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gFd-mO-Ecm" firstAttribute="top" secondItem="dBK-zd-pVa" secondAttribute="bottom" id="1p2-YN-45D"/>
                             <constraint firstItem="gFd-mO-Ecm" firstAttribute="top" secondItem="6oV-ko-i7l" secondAttribute="top" constant="50" id="2IZ-DQ-9Gt"/>
-                            <constraint firstItem="x6r-6l-Exq" firstAttribute="leading" secondItem="dBK-zd-pVa" secondAttribute="trailing" id="8wu-BJ-2bs"/>
+                            <constraint firstItem="6oV-ko-i7l" firstAttribute="trailing" secondItem="x6r-6l-Exq" secondAttribute="trailing" constant="5" id="6TW-fv-ASJ"/>
                             <constraint firstItem="6oV-ko-i7l" firstAttribute="trailing" secondItem="gFd-mO-Ecm" secondAttribute="trailing" id="CxK-v7-wD1"/>
                             <constraint firstItem="gFd-mO-Ecm" firstAttribute="leading" secondItem="6oV-ko-i7l" secondAttribute="leading" id="H63-Nu-x9Q"/>
-                            <constraint firstItem="x6r-6l-Exq" firstAttribute="top" secondItem="6oV-ko-i7l" secondAttribute="top" id="LmX-CF-2m2"/>
-                            <constraint firstItem="x6r-6l-Exq" firstAttribute="trailing" secondItem="6oV-ko-i7l" secondAttribute="trailing" id="PbE-FI-640"/>
-                            <constraint firstItem="dBK-zd-pVa" firstAttribute="leading" secondItem="6oV-ko-i7l" secondAttribute="leading" id="SsM-2L-5jm"/>
-                            <constraint firstItem="dBK-zd-pVa" firstAttribute="top" secondItem="6oV-ko-i7l" secondAttribute="top" id="cfQ-A9-no2"/>
+                            <constraint firstItem="x6r-6l-Exq" firstAttribute="top" secondItem="mBL-yT-V8Z" secondAttribute="top" id="Hd9-nR-d9f"/>
+                            <constraint firstItem="x6r-6l-Exq" firstAttribute="firstBaseline" secondItem="mBL-yT-V8Z" secondAttribute="baseline" id="MKx-hh-QkE"/>
+                            <constraint firstItem="mBL-yT-V8Z" firstAttribute="top" secondItem="6oV-ko-i7l" secondAttribute="top" constant="5" id="cpL-Vg-UJk"/>
+                            <constraint firstItem="gFd-mO-Ecm" firstAttribute="top" secondItem="mBL-yT-V8Z" secondAttribute="bottom" constant="5" id="kJ1-4P-JkG"/>
+                            <constraint firstItem="mBL-yT-V8Z" firstAttribute="leading" secondItem="6oV-ko-i7l" secondAttribute="leading" constant="5" id="tdo-c2-MMN"/>
+                            <constraint firstItem="x6r-6l-Exq" firstAttribute="leading" secondItem="mBL-yT-V8Z" secondAttribute="trailing" constant="5" id="xrX-18-aVx"/>
                             <constraint firstItem="6oV-ko-i7l" firstAttribute="bottom" secondItem="gFd-mO-Ecm" secondAttribute="bottom" id="yqp-lD-C6f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6oV-ko-i7l"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Weightlifting" id="Lkw-rk-vfj"/>
+                    <navigationItem key="navigationItem" title="Weightlifting" id="Lkw-rk-vfj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="tmT-qQ-6ee">
+                            <connections>
+                                <action selector="uploadFromCoreData:" destination="A6S-Ws-q80" id="Lkb-gl-zSc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="aDK-Hu-rr0">
+                            <connections>
+                                <action selector="saveToCoreData:" destination="A6S-Ws-q80" id="vpo-HG-EOV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="dateButton" destination="mBL-yT-V8Z" id="lYQ-ce-hmI"/>
                         <outlet property="tableView" destination="gFd-mO-Ecm" id="1yD-cp-WPY"/>
                     </connections>
                 </viewController>
