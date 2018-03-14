@@ -10,6 +10,7 @@
 		02F18DC594E9CCE7D79C7274 /* Pods_WeightLifting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15EDA46167E0FD2D23DE1C0 /* Pods_WeightLifting.framework */; };
 		7F0ED5D120455A4C00A3DEBB /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */; };
 		7F177864200D530400E2FCEA /* ModelExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F177863200D530300E2FCEA /* ModelExercise.swift */; };
+		7F19BE31205510B800611681 /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19BE30205510B800611681 /* Inspectable.swift */; };
 		7F5E43D620442A3300FBE03C /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43D520442A3300FBE03C /* TrainingViewController.swift */; };
 		7F5E43D920442A9500FBE03C /* ModelT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43D820442A9500FBE03C /* ModelT.swift */; };
 		7FA2B0AD20495D51006D4812 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2B0AC20495D51006D4812 /* CoreDataManager.swift */; };
@@ -32,6 +33,7 @@
 		6B151355F89DE60C705303F7 /* Pods-WeightLifting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeightLifting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeightLifting/Pods-WeightLifting.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		7F177863200D530300E2FCEA /* ModelExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExercise.swift; sourceTree = "<group>"; };
+		7F19BE30205510B800611681 /* Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
 		7F5E43D520442A3300FBE03C /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		7F5E43D820442A9500FBE03C /* ModelT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelT.swift; sourceTree = "<group>"; };
 		7FA2B0AC20495D51006D4812 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				7FB1CCF1200621EC00D23FDC /* AppDelegate.swift */,
 				7FD1D01C2046A59600926C4F /* Saver.swift */,
 				7FB43F1B20484588001492B3 /* Helper.swift */,
+				7F19BE30205510B800611681 /* Inspectable.swift */,
 				7FA2B0AC20495D51006D4812 /* CoreDataManager.swift */,
 				7F5E43D520442A3300FBE03C /* TrainingViewController.swift */,
 				7F0ED5D020455A4C00A3DEBB /* ChartViewController.swift */,
@@ -279,6 +282,7 @@
 				7FAE5C9D200F860F004C80E7 /* RepetitionCellTableViewCell.swift in Sources */,
 				7FB43F1C20484588001492B3 /* Helper.swift in Sources */,
 				7F0ED5D120455A4C00A3DEBB /* ChartViewController.swift in Sources */,
+				7F19BE31205510B800611681 /* Inspectable.swift in Sources */,
 				7FA2B0AD20495D51006D4812 /* CoreDataManager.swift in Sources */,
 				7FD1D01D2046A59600926C4F /* Saver.swift in Sources */,
 			);

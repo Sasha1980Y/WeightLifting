@@ -23,8 +23,7 @@ class TrainingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        myTraining.append(Exercises(name: "Ривок", repetitionsArray: [Exercises.RepetitionCount(weight: 0)]))
-        
+        myTraining.append(Exercises(name: "Ривок", repetitionsArray: [Exercises.RepetitionCount(weight: 0, count: 1)]))
         // nib for cell
         let nib = UINib(nibName: "RepetitionCellTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
@@ -116,7 +115,7 @@ class TrainingViewController: UIViewController {
     // reload empty table
     func emptyTrainingList() {
         myTraining = []
-        myTraining.append(Exercises(name: "Ривок", repetitionsArray: [Exercises.RepetitionCount(weight: 0)]))
+        myTraining.append(Exercises(name: "Ривок", repetitionsArray: [Exercises.RepetitionCount(weight: 0, count: 1)]))
         self.tableView.reloadData()
     }
     
@@ -141,7 +140,9 @@ extension TrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let  headerCell = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 50))
-        headerCell.backgroundColor = UIColor.cyan
+        
+        let red = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 1.0)
+        headerCell.backgroundColor = red
         
         // edit Button
         let editButton = UIButton(frame: CGRect(x: tableView.frame.size.width - 100, y: 0, width: 50, height: 50))
@@ -158,9 +159,11 @@ extension TrainingViewController: UITableViewDataSource {
         
         // label with title for header
         let titleHeader = UILabel(frame: CGRect(x: 10, y: 0, width: tableView.frame.size.width - 100, height: 50))
+        //titleHeader.font = UIFont.systemFont(ofSize: 20)
+        titleHeader.font = UIFont.boldSystemFont(ofSize: 20)
         titleHeader.text = myTraining[section].name
         headerCell.addSubview(titleHeader)
-        
+         
         return headerCell
         
     }
@@ -171,7 +174,7 @@ extension TrainingViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! RepetitionCellTableViewCell
-        cell.weightAndCountTextField?.text = "Подход №" + "\(indexPath.row + 1)" + "  " + "Вес \(myTraining[indexPath.section].repetitionsArray[indexPath.row].weight)"
+        cell.weightAndCountTextField?.text = "№" + "\(indexPath.row + 1)" + "  " + "Вага \(myTraining[indexPath.section].repetitionsArray[indexPath.row].weight)" + "  Повтор \(myTraining[indexPath.section].repetitionsArray[indexPath.row].count)"
         cell.editButton.addTarget(self, action: #selector(editButton(sender:)), for: .touchUpInside)
         cell.plusButton.addTarget(self, action: #selector(plusButton(sender:)), for: .touchUpInside)
         
@@ -205,21 +208,27 @@ extension TrainingViewController: UITableViewDataSource {
             let indexPath = tableView.indexPath(for: cell)
             print("main button sect  sect", (indexPath?.row)! + 1)
             print("main button row  row", (indexPath?.section)! + 1)
-            
             if let index = indexPath?.section {
                 let alert = UIAlertController(title: nil, message: "Enter new weight", preferredStyle: .alert)
-                alert.addTextField { (_) in
+                alert.addTextField { (tf) in
+                    tf.keyboardType = UIKeyboardType.decimalPad
+                }
+                alert.addTextField { (tf) in
+                    tf.keyboardType = UIKeyboardType.decimalPad
                 }
                 let action = UIAlertAction(title: "OK", style: .default) { [weak alert](_) in
                     let textField = alert?.textFields![0]
+                    let textField2 = alert?.textFields![1]
                     if let text = Int((textField?.text)!) {
-                        self.myTraining[index].repetitionsArray.append(Exercises.RepetitionCount.init(weight: text))
+                        let text2 = Int((textField2?.text)!); self.myTraining[index].repetitionsArray.append(Exercises.RepetitionCount.init(weight: text, count: text2 ?? 1))
                         self.tableView.reloadData()
                     }
                 }
+                
                 alert.addAction(action)
                 present(alert, animated: true, completion: nil)
-                }
+            }
+            
         }
         self.tableView.reloadData()
     }
@@ -230,17 +239,26 @@ extension TrainingViewController: UITableViewDataSource {
             
             let alert = UIAlertController(title: nil, message: "Edit exercise", preferredStyle: .alert)
             alert.addTextField { (tf) in
+                tf.keyboardType = UIKeyboardType.decimalPad
                 if let indexS = indexPath?.section, let indexR = indexPath?.row {
                     tf.text = String(self.myTraining[indexS].repetitionsArray[indexR].weight)
                 }
             }
+            alert.addTextField { (tf) in
+                tf.keyboardType = UIKeyboardType.decimalPad
+                if let indexS = indexPath?.section, let indexR = indexPath?.row {
+                    tf.text = String(self.myTraining[indexS].repetitionsArray[indexR].count)
+                }
+            }
             let action = UIAlertAction(title: "OK", style: .default) { [weak alert](_) in
                 let textField = alert?.textFields![0]
-                
-                if let text = textField?.text {
+                let textField2 = alert?.textFields![1]
+                if let text = textField?.text, let text2 = textField2?.text {
+                    
                     if let indexS = indexPath?.section, let indexR = indexPath?.row {
-                        if let intText = Int(text) {
+                        if let intText = Int(text), let intText2 = Int(text2) {
                             self.myTraining[indexS].repetitionsArray[indexR].weight = intText
+                            self.myTraining[indexS].repetitionsArray[indexR].count = intText2
                         }
                     }
                     self.tableView.reloadData()
@@ -261,7 +279,7 @@ extension TrainingViewController: UITableViewDataSource {
         let action = UIAlertAction(title: "OK", style: .default) { [weak alert](_) in
             let textField = alert?.textFields![0]
             if let text = textField?.text {
-                self.myTraining.append(Exercises(name: text, repetitionsArray: [Exercises.RepetitionCount(weight: 0)]))
+                self.myTraining.append(Exercises(name: text, repetitionsArray: [Exercises.RepetitionCount(weight: 0, count: 1)]))
                 self.tableView.reloadData()
             }
         }

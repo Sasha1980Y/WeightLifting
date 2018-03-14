@@ -36,7 +36,7 @@ struct Exercises: Codable {
     
     struct RepetitionCount: Codable {
         var weight: Int
-        //var count: Int
+        var count: Int
         var description: [String: Any] {
             get {
                 return ["weight": weight] as [String : Any]

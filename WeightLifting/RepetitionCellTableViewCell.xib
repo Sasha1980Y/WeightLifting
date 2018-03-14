@@ -37,7 +37,7 @@
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="weight and count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="loz-39-vVY">
                         <rect key="frame" x="0.0" y="0.0" width="479" height="50.5"/>
                         <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
@@ -65,7 +65,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="edit" width="64" height="64"/>
-        <image name="plus" width="64" height="64"/>
+        <image name="edit" width="24" height="24"/>
+        <image name="plus" width="24" height="24"/>
     </resources>
 </document>

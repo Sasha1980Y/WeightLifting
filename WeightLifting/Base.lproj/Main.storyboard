@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,6 +109,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xo-wz-KDq">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-mO-Ecm">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,21 +131,43 @@
                                     <outlet property="delegate" destination="A6S-Ws-q80" id="nNq-XW-8Ws"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6r-6l-Exq">
-                                <rect key="frame" x="310" y="69" width="60" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.96087433310000003" blue="0.23853101230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6r-6l-Exq">
+                                <rect key="frame" x="305" y="69" width="60" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="msw-2l-PIb"/>
                                 </constraints>
-                                <state key="normal" title="Chart"/>
+                                <state key="normal" image="chart">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.97638529539108276" green="0.97652524709701538" blue="0.97635465860366821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Yw7-ye-FHR" kind="show" id="18e-Cq-QML"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBL-yT-V8Z">
-                                <rect key="frame" x="5" y="69" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.36519835150000002" green="1" blue="0.34180222669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Date"/>
+                                <rect key="frame" x="10" y="69" width="290" height="40"/>
+                                <state key="normal" title="Date">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="dateAlertButton:" destination="A6S-Ws-q80" eventType="touchUpInside" id="JdT-6L-X0f"/>
                                 </connections>
@@ -151,14 +176,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gFd-mO-Ecm" firstAttribute="top" secondItem="6oV-ko-i7l" secondAttribute="top" constant="50" id="2IZ-DQ-9Gt"/>
-                            <constraint firstItem="6oV-ko-i7l" firstAttribute="trailing" secondItem="x6r-6l-Exq" secondAttribute="trailing" constant="5" id="6TW-fv-ASJ"/>
+                            <constraint firstAttribute="trailing" secondItem="x6r-6l-Exq" secondAttribute="trailing" constant="10" id="6TW-fv-ASJ"/>
+                            <constraint firstItem="gFd-mO-Ecm" firstAttribute="top" secondItem="x6r-6l-Exq" secondAttribute="bottom" constant="5" id="9FS-4C-e1h"/>
                             <constraint firstItem="6oV-ko-i7l" firstAttribute="trailing" secondItem="gFd-mO-Ecm" secondAttribute="trailing" id="CxK-v7-wD1"/>
                             <constraint firstItem="gFd-mO-Ecm" firstAttribute="leading" secondItem="6oV-ko-i7l" secondAttribute="leading" id="H63-Nu-x9Q"/>
                             <constraint firstItem="x6r-6l-Exq" firstAttribute="top" secondItem="mBL-yT-V8Z" secondAttribute="top" id="Hd9-nR-d9f"/>
-                            <constraint firstItem="x6r-6l-Exq" firstAttribute="firstBaseline" secondItem="mBL-yT-V8Z" secondAttribute="baseline" id="MKx-hh-QkE"/>
                             <constraint firstItem="mBL-yT-V8Z" firstAttribute="top" secondItem="6oV-ko-i7l" secondAttribute="top" constant="5" id="cpL-Vg-UJk"/>
                             <constraint firstItem="gFd-mO-Ecm" firstAttribute="top" secondItem="mBL-yT-V8Z" secondAttribute="bottom" constant="5" id="kJ1-4P-JkG"/>
-                            <constraint firstItem="mBL-yT-V8Z" firstAttribute="leading" secondItem="6oV-ko-i7l" secondAttribute="leading" constant="5" id="tdo-c2-MMN"/>
+                            <constraint firstItem="mBL-yT-V8Z" firstAttribute="leading" secondItem="WR6-js-ytN" secondAttribute="leading" constant="10" id="tdo-c2-MMN"/>
                             <constraint firstItem="x6r-6l-Exq" firstAttribute="leading" secondItem="mBL-yT-V8Z" secondAttribute="trailing" constant="5" id="xrX-18-aVx"/>
                             <constraint firstItem="6oV-ko-i7l" firstAttribute="bottom" secondItem="gFd-mO-Ecm" secondAttribute="bottom" id="yqp-lD-C6f"/>
                         </constraints>
@@ -279,4 +304,7 @@
             <point key="canvasLocation" x="-62" y="-916"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart" width="24" height="24"/>
+    </resources>
 </document>

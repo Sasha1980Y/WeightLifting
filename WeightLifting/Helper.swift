@@ -6,6 +6,7 @@
 //  Copyright © 2018 Alexander Yakovenko. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 class Helper {
@@ -25,3 +26,4 @@ class Helper {
     
     
 }
+
